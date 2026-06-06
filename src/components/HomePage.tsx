@@ -69,8 +69,8 @@ export const HomePage: React.FC<HomePageProps> = ({
   return (
     <div className="space-y-12 animate-fade-in pb-16">
       
-      {/* Hero Banner with Video Background */}
-      <section className="relative min-h-[calc(100vh-80px)] flex items-center overflow-hidden">
+      {/* Hero Banner with Video Background - pulled up behind navbar */}
+      <section className="relative min-h-screen flex items-center overflow-hidden -mt-20">
         {/* Video background */}
         <video
           src="/img/Ankvid1.mp4"
@@ -83,7 +83,7 @@ export const HomePage: React.FC<HomePageProps> = ({
         />
 
         {/* Content */}
-        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 pt-20">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
