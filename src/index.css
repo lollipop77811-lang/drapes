@@ -58,3 +58,64 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #1A8888;
 }
+
+/* ============================================= */
+/* Custom Animations used throughout the project   */
+/* ============================================= */
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in {
+  0% {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Tailwind v4 animation utilities via @utility */
+@utility animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+@utility animate-slide-left {
+  animation: slide-left 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@utility animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+@utility animate-scale-in {
+  animation: scale-in 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { SareeProduct } from '../types';
-import { ArrowRight, Sparkles, Compass, BookOpen, Feather } from 'lucide-react';
+import { ArrowRight, Compass, BookOpen, Feather } from 'lucide-react';
 import { ProductCard } from './ProductCard';
 
 interface HomePageProps {

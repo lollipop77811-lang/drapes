@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Play, Pause, Music, Heart, Sparkles, Star } from 'lucide-react';
+import { Play, Pause, Music, Heart, Star } from 'lucide-react';
 import { SareeProduct } from '../types';
 
 interface LookbookProps {
