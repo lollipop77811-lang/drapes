@@ -2,7 +2,6 @@ import { useState, useMemo } from 'react';
 import { SAMPLE_PRODUCTS } from './data/products';
 import { SareeProduct, CartItem } from './types';
 import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
 import { HomePage } from './components/HomePage';
 import { FilterSidebar } from './components/FilterSidebar';
 import { ProductCard } from './components/ProductCard';
@@ -184,22 +183,13 @@ export default function App() {
         
         {/* HOME PAGE VIEW */}
         {currentPage === 'home' && (
-          <>
-            <Hero
-              onExploreClick={() => {
-                setCurrentPage('shop');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-              onOpenQuickGuide={() => setIsQuickGuideOpen(true)}
-            />
-            <HomePage
-              products={SAMPLE_PRODUCTS}
-              onQuickView={(p) => setSelectedProduct(p)}
-              onAddToCart={(p) => handleAddToCart(p, 'Unstitched Pure Silk Panel')}
-              setCurrentPage={setCurrentPage}
-              onOpenQuickGuide={() => setIsQuickGuideOpen(true)}
-            />
-          </>
+          <HomePage
+            products={SAMPLE_PRODUCTS}
+            onQuickView={(p) => setSelectedProduct(p)}
+            onAddToCart={(p) => handleAddToCart(p, 'Unstitched Pure Silk Panel')}
+            setCurrentPage={setCurrentPage}
+            onOpenQuickGuide={() => setIsQuickGuideOpen(true)}
+          />
         )}
 
         {/* COLLECTION CATALOG SHOP VIEW */}

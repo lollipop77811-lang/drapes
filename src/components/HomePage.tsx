@@ -69,95 +69,85 @@ export const HomePage: React.FC<HomePageProps> = ({
   return (
     <div className="space-y-12 animate-fade-in pb-16">
       
-      {/* Magazine-style Asymmetrical Hero Banner */}
-      <section className="relative bg-parchment px-4 sm:px-6 lg:px-8 border-b border-subtle-grey min-h-[calc(100vh-80px)] flex items-center">
-        <div className="max-w-7xl mx-auto relative z-10 w-full">
-          
-          {/* Editorial Column Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            
-            <div className="lg:col-span-6 space-y-5 md:space-y-6">
+      {/* Hero Banner with Video Background */}
+      <section className="relative bg-plum min-h-[calc(100vh-80px)] flex items-center overflow-hidden">
+        {/* Video background */}
+        <video
+          src="/img/Ankvid1.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        />
 
-              
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-plum tracking-tight leading-[0.95] font-serif">
-                Sovereignty <br />
-                <span className="text-teal italic font-medium">In Six</span> <br />
-                Yards.
-              </h1>
+        {/* Tinted overlay for text readability */}
+        <div className="absolute inset-0 bg-plum/55 z-[1]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-plum/85 via-plum/50 to-plum/20 z-[1]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-plum/70 via-transparent to-transparent z-[1]" />
 
-              <p className="text-sm md:text-base text-mauve font-light max-w-lg leading-relaxed">
-                Welcome to SaareeDrapes, a high-fashion publishing of modern ethnic luxury. We design using unbleached <span className="text-plum font-semibold">Raw Parchment</span> silks, clashing against <span className="text-teal font-semibold">Electric Teal</span> and <span className="text-terracotta font-semibold">Burnt Terracotta</span>.
-              </p>
+        {/* Content */}
+        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
-              {/* Dynamic Stylist Tip Slider */}
-              <div className="bg-elevated border border-subtle-grey p-3 md:p-4 shadow-sm max-w-md">
-                <div className="flex justify-between items-center text-[9px] font-bold tracking-widest text-terracotta uppercase mb-2 font-sans">
-                  <span>EDITORIAL BOARD STYLING TIP</span>
-                  <button 
-                    onClick={() => setCurrentTipIndex((prev) => (prev + 1) % styleTips.length)}
-                    className="text-teal hover:underline"
+              <div className="lg:col-span-7 space-y-5 md:space-y-6">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-parchment tracking-tight leading-[0.95] font-serif">
+                  Sovereignty <br />
+                  <span className="text-teal italic font-medium">In Six</span> <br />
+                  Yards.
+                </h1>
+
+                <p className="text-sm md:text-base text-parchment/80 font-light max-w-lg leading-relaxed">
+                  Welcome to SaareeDrapes, a high-fashion publishing of modern ethnic luxury. We design using unbleached <span className="text-parchment font-semibold">Raw Parchment</span> silks, clashing against <span className="text-teal font-semibold">Electric Teal</span> and <span className="text-terracotta font-semibold">Burnt Terracotta</span>.
+                </p>
+
+                {/* Dynamic Stylist Tip Slider */}
+                <div className="bg-parchment/10 backdrop-blur-sm border border-parchment/25 p-3 md:p-4 shadow-sm max-w-md">
+                  <div className="flex justify-between items-center text-[9px] font-bold tracking-widest text-terracotta uppercase mb-2 font-sans">
+                    <span>EDITORIAL BOARD STYLING TIP</span>
+                    <button 
+                      onClick={() => setCurrentTipIndex((prev) => (prev + 1) % styleTips.length)}
+                      className="text-teal hover:underline"
+                    >
+                      NEXT ADVICE &rarr;
+                    </button>
+                  </div>
+                  <h4 className="text-xs font-bold text-parchment uppercase tracking-wider font-sans">
+                    {currentTip.title}
+                  </h4>
+                  <p className="text-xs text-parchment/80 italic font-serif mt-1">
+                    &ldquo;{currentTip.desc}&rdquo;
+                  </p>
+                </div>
+
+                {/* Editorial Buttons */}
+                <div className="flex flex-wrap gap-3 pt-1">
+                  <button
+                    onClick={() => {
+                      setCurrentPage('shop');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    className="bg-teal hover:bg-terracotta text-parchment font-sans font-bold text-[11px] tracking-[0.2em] uppercase py-3 px-6 transition-all duration-200 flex items-center gap-2 shadow-lg"
                   >
-                    NEXT ADVICE →
+                    VIEW CATALOGUE
+                    <ArrowRight size={13} />
+                  </button>
+
+                  <button
+                    onClick={() => {
+                      setCurrentPage('masterclass');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    className="border border-parchment/60 hover:bg-parchment hover:text-plum text-parchment font-sans font-bold text-[11px] tracking-[0.2em] uppercase py-2.5 px-5 transition-all bg-parchment/10 backdrop-blur-sm"
+                  >
+                    LEARN DRAPING ACADEMY
                   </button>
                 </div>
-                <h4 className="text-xs font-bold text-plum uppercase tracking-wider font-sans">
-                  {currentTip.title}
-                </h4>
-                <p className="text-xs text-mauve italic font-serif mt-1">
-                  “{currentTip.desc}”
-                </p>
               </div>
 
-              {/* Editorial Buttons */}
-              <div className="flex flex-wrap gap-3 pt-1">
-                <button
-                  onClick={() => {
-                    setCurrentPage('shop');
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                  }}
-                  className="bg-teal hover:bg-plum text-parchment font-sans font-bold text-[11px] tracking-[0.2em] uppercase py-3 px-6 transition-all duration-200 flex items-center gap-2 shadow-md"
-                >
-                  VIEW CATALOGUE
-                  <ArrowRight size={13} />
-                </button>
-
-                <button
-                  onClick={() => {
-                    setCurrentPage('masterclass');
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                  }}
-                  className="border border-plum hover:bg-plum hover:text-parchment text-plum font-sans font-bold text-[11px] tracking-[0.2em] uppercase py-2.5 px-5 transition-all bg-transparent"
-                >
-                  LEARN DRAPING ACADEMY
-                </button>
-              </div>
             </div>
-
-            {/* Large Visual Frame on Right */}
-            <div className="lg:col-span-6 relative h-[380px] md:h-[460px] lg:h-[520px] flex items-center justify-center">
-              
-              {/* Primary Image Frame */}
-              <div className="absolute z-20 w-[75%] h-[88%] left-4 top-4 border-4 border-plum shadow-xl overflow-hidden group">
-                <img
-                  src="https://images.pexels.com/photos/6842791/pexels-photo-6842791.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800"
-                  alt="High fashion luxury saree shot"
-                  className="w-full h-full object-cover object-top transition-transform duration-[6000ms] group-hover:scale-110"
-                />
-                <div className="absolute bottom-4 left-4 bg-plum/90 text-parchment text-[9px] uppercase tracking-widest px-2.5 py-1 font-sans">
-                  COVER POSTER: THE NEO-HERITAGE ARMOR
-                </div>
-              </div>
-
-              {/* Secondary overlapping image */}
-              <div className="absolute z-10 w-[48%] h-[60%] right-2 bottom-2 border border-subtle-grey shadow-lg overflow-hidden hidden sm:block">
-                <img
-                  src="https://images.pexels.com/photos/29049398/pexels-photo-29049398.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800"
-                  alt="Burnt Terracotta raw texture close up"
-                  className="w-full h-full object-cover object-center"
-                />
-              </div>
-            </div>
-
           </div>
         </div>
       </section>
@@ -213,7 +203,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                   <div className="flex flex-col md:flex-row justify-between items-start md:items-end border-b border-parchment/20 pb-6 gap-4">
                     <div>
                       <span className="text-[9px] font-extrabold tracking-[0.2em] uppercase px-2.5 py-1 bg-teal text-parchment">
-                        EXHIBIT 01 • FRESHLY DRAUGHTED
+                        EXHIBIT 01 &bull; FRESHLY DRAUGHTED
                       </span>
                       <h3 className="text-3xl md:text-4xl font-bold font-serif mt-2">
                         New Arrival Capsule
@@ -288,7 +278,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                   <div className="flex flex-col md:flex-row justify-between items-start md:items-end border-b border-parchment/20 pb-6 gap-4">
                     <div>
                       <span className="text-[9px] font-extrabold tracking-[0.2em] uppercase px-2.5 py-1 bg-plum text-teal">
-                        EXHIBIT 02 • HIGH-DEMAND PIECES
+                        EXHIBIT 02 &bull; HIGH-DEMAND PIECES
                       </span>
                       <h3 className="text-3xl md:text-4xl font-bold font-serif mt-2">
                         Bestselling Saree Masterpieces
@@ -364,7 +354,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                     <div>
                       <span className="text-[9px] font-extrabold tracking-[0.2em] uppercase px-2.5 py-1 bg-terracotta text-parchment flex items-center gap-1.5 w-fit">
                         <Feather size={12} />
-                        EXHIBIT 03 • SOFTY, AIRY, COMFORTABLE
+                        EXHIBIT 03 &bull; SOFTY, AIRY, COMFORTABLE
                       </span>
                       <h3 className="text-3xl md:text-4xl font-bold font-serif mt-2 text-plum">
                         Weightless & Breathable Weaves
@@ -436,7 +426,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                   <div className="flex flex-col md:flex-row justify-between items-start md:items-end border-b border-parchment/20 pb-6 gap-4">
                     <div>
                       <span className="text-[9px] font-extrabold tracking-[0.2em] uppercase px-2.5 py-1 bg-plum text-terracotta">
-                        EXHIBIT 04 • ANCESTRAL TAXONOMY
+                        EXHIBIT 04 &bull; ANCESTRAL TAXONOMY
                       </span>
                       <h3 className="text-3xl md:text-4xl font-bold font-serif mt-2">
                         Browse Saree by Weaving Fabric
@@ -475,7 +465,7 @@ export const HomePage: React.FC<HomePageProps> = ({
 
                   {/* Section Footer */}
                   <div className="flex justify-between items-center text-[9px] tracking-widest text-parchment/60 pt-4 border-t border-parchment/10">
-                    <span>SAAREEDRAPES ANCESTRAL DIRECTIVE • 2026</span>
+                    <span>SAAREEDRAPES ANCESTRAL DIRECTIVE &bull; 2026</span>
                     <span>END OF COMPACT SPREAD &uarr;</span>
                   </div>
 

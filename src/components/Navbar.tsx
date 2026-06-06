@@ -42,9 +42,9 @@ export const Navbar: React.FC<NavbarProps> = ({
   };
 
   return (
-    <header className={`sticky top-0 z-40 w-full transition-all duration-300 ${isScrolled ? 'bg-parchment/95 backdrop-blur-md border-b border-subtle-grey shadow-sm' : 'bg-transparent border-b border-transparent'}`}>
-      {/* Editorial Announcement Marquee */}
-      <div className="bg-plum text-parchment py-1.5 px-4 overflow-hidden text-center select-none">
+    <header className={`sticky top-0 z-40 w-full transition-all duration-500 ${isScrolled ? 'shadow-md' : ''}`}>
+      {/* Editorial Announcement Marquee - hidden at top, shows on scroll */}
+      <div className={`bg-plum text-parchment overflow-hidden text-center select-none transition-all duration-500 ${isScrolled ? 'py-1.5 px-4 max-h-10 opacity-100' : 'py-0 px-4 max-h-0 opacity-0'}`}>
         <div className="inline-flex items-center gap-8 text-[9px] md:text-[10px] font-bold uppercase tracking-widest animate-marquee whitespace-nowrap">
           <span className="flex items-center gap-1.5">
             <span className="inline-block w-1.5 h-1.5 bg-teal rounded-full animate-ping" />
@@ -60,7 +60,7 @@ export const Navbar: React.FC<NavbarProps> = ({
       </div>
 
       {/* Main Navigation Row */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between transition-all duration-500 ${isScrolled ? 'bg-parchment/95 backdrop-blur-md border-b border-subtle-grey' : 'bg-transparent border-b border-transparent'}`}>
         
         {/* Left section: Navigation Links (Desktop) */}
         <nav className="hidden lg:flex items-center gap-6">
