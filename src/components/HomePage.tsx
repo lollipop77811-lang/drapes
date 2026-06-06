@@ -70,7 +70,7 @@ export const HomePage: React.FC<HomePageProps> = ({
     <div className="space-y-12 animate-fade-in pb-16">
       
       {/* Hero Banner with Video Background */}
-      <section className="relative bg-plum min-h-[calc(100vh-80px)] flex items-center overflow-hidden">
+      <section className="relative min-h-[calc(100vh-80px)] flex items-center overflow-hidden">
         {/* Video background */}
         <video
           src="/img/Ankvid1.mp4"
@@ -81,11 +81,6 @@ export const HomePage: React.FC<HomePageProps> = ({
           preload="auto"
           className="absolute inset-0 w-full h-full object-cover z-0"
         />
-
-        {/* Tinted overlay for text readability */}
-        <div className="absolute inset-0 bg-plum/55 z-[1]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-plum/85 via-plum/50 to-plum/20 z-[1]" />
-        <div className="absolute inset-0 bg-gradient-to-t from-plum/70 via-transparent to-transparent z-[1]" />
 
         {/* Content */}
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
