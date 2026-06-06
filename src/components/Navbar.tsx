@@ -60,14 +60,14 @@ export const Navbar: React.FC<NavbarProps> = ({
       </div>
 
       {/* Main Navigation Row */}
-      <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between transition-all duration-500 ${isScrolled ? 'bg-parchment/95 backdrop-blur-md border-b border-subtle-grey' : 'bg-transparent border-b border-transparent'}`}>
+      <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between transition-all duration-500 ${isScrolled ? 'bg-parchment/95 backdrop-blur-md border-b border-subtle-grey' : ''}`}>
         
         {/* Left section: Navigation Links (Desktop) */}
         <nav className="hidden lg:flex items-center gap-6">
           <button
             onClick={() => handleNavClick('home')}
-            className={`text-[11px] font-bold tracking-widest uppercase pb-1 transition-colors relative ${
-              currentPage === 'home' ? 'text-teal' : (isScrolled ? 'text-plum hover:text-teal' : 'text-parchment hover:text-teal')
+            className={`text-[11px] font-bold tracking-widest uppercase pb-1 transition-colors relative drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)] ${
+              currentPage === 'home' ? 'text-teal drop-shadow-none' : (isScrolled ? 'text-plum hover:text-teal drop-shadow-none' : 'text-parchment hover:text-teal')
             }`}
           >
             Home
@@ -77,8 +77,8 @@ export const Navbar: React.FC<NavbarProps> = ({
           </button>
           <button
             onClick={() => handleNavClick('shop')}
-            className={`text-[11px] font-bold tracking-widest uppercase pb-1 transition-colors relative ${
-              currentPage === 'shop' ? 'text-teal' : (isScrolled ? 'text-plum hover:text-teal' : 'text-parchment hover:text-teal')
+            className={`text-[11px] font-bold tracking-widest uppercase pb-1 transition-colors relative drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)] ${
+              currentPage === 'shop' ? 'text-teal drop-shadow-none' : (isScrolled ? 'text-plum hover:text-teal drop-shadow-none' : 'text-parchment hover:text-teal')
             }`}
           >
             Collection Catalog
@@ -88,8 +88,8 @@ export const Navbar: React.FC<NavbarProps> = ({
           </button>
           <button
             onClick={() => handleNavClick('lookbook')}
-            className={`text-[11px] font-bold tracking-widest uppercase pb-1 transition-colors relative ${
-              currentPage === 'lookbook' ? 'text-teal' : (isScrolled ? 'text-plum hover:text-teal' : 'text-parchment hover:text-teal')
+            className={`text-[11px] font-bold tracking-widest uppercase pb-1 transition-colors relative drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)] ${
+              currentPage === 'lookbook' ? 'text-teal drop-shadow-none' : (isScrolled ? 'text-plum hover:text-teal drop-shadow-none' : 'text-parchment hover:text-teal')
             }`}
           >
             Lookbook Vol. IV
@@ -99,8 +99,8 @@ export const Navbar: React.FC<NavbarProps> = ({
           </button>
           <button
             onClick={() => handleNavClick('masterclass')}
-            className={`text-[11px] font-bold tracking-widest uppercase pb-1 transition-colors relative ${
-              currentPage === 'masterclass' ? 'text-teal' : (isScrolled ? 'text-plum hover:text-teal' : 'text-parchment hover:text-teal')
+            className={`text-[11px] font-bold tracking-widest uppercase pb-1 transition-colors relative drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)] ${
+              currentPage === 'masterclass' ? 'text-teal drop-shadow-none' : (isScrolled ? 'text-plum hover:text-teal drop-shadow-none' : 'text-parchment hover:text-teal')
             }`}
           >
             Draping Academy
@@ -114,7 +114,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         <div className="flex lg:hidden items-center">
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className={`p-2 transition-colors ${isScrolled ? 'text-plum hover:text-teal' : 'text-parchment hover:text-teal'}`}
+            className={`p-2 transition-colors drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)] ${isScrolled ? 'text-plum hover:text-teal drop-shadow-none' : 'text-parchment hover:text-teal'}`}
             aria-label="Toggle Menu"
           >
             {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -127,10 +127,10 @@ export const Navbar: React.FC<NavbarProps> = ({
             onClick={() => handleNavClick('home')}
             className="group inline-block select-none text-left cursor-pointer"
           >
-            <h1 className={`text-2xl md:text-3xl font-bold tracking-tighter font-serif group-hover:text-teal transition-colors leading-none ${isScrolled ? 'text-plum' : 'text-parchment'}`}>
+            <h1 className={`text-2xl md:text-3xl font-bold tracking-tighter font-serif group-hover:text-teal transition-colors leading-none ${isScrolled ? 'text-plum' : 'text-parchment drop-shadow-[0_1px_3px_rgba(0,0,0,0.7)]'}`}>
               Saaree<span className="font-light italic text-teal">Drapes</span>
             </h1>
-            <span className={`text-[9px] uppercase tracking-[0.35em] block mt-0.5 text-center transition-colors ${isScrolled ? 'text-mauve' : 'text-parchment/70'}`}>
+            <span className={`text-[9px] uppercase tracking-[0.35em] block mt-0.5 text-center transition-colors drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)] ${isScrolled ? 'text-mauve drop-shadow-none' : 'text-parchment/70'}`}>
               Editorial Heritage
             </span>
           </button>
@@ -162,7 +162,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   setCurrentPage('shop');
                 }
               }}
-              className={`p-2 transition-colors ${isScrolled ? 'text-plum hover:text-teal' : 'text-parchment hover:text-teal'}`}
+              className={`p-2 transition-colors drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)] ${isScrolled ? 'text-plum hover:text-teal drop-shadow-none' : 'text-parchment hover:text-teal'}`}
               title="Search Collection"
             >
               <Search size={18} />
@@ -172,7 +172,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Quick Draping Guide Icon */}
           <button
             onClick={onOpenQuickGuide}
-            className={`hidden lg:flex items-center gap-1.5 text-[10px] font-bold tracking-widest uppercase hover:text-teal transition-colors border py-1.5 px-3 ${isScrolled ? 'text-mauve border-subtle-grey bg-elevated' : 'text-parchment/80 border-parchment/30 bg-parchment/10 backdrop-blur-sm'}`}
+            className={`hidden lg:flex items-center gap-1.5 text-[10px] font-bold tracking-widest uppercase hover:text-teal transition-colors drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)] ${isScrolled ? 'text-mauve border border-subtle-grey bg-elevated drop-shadow-none' : 'text-parchment border-transparent bg-transparent'}`}
             title="Draping Helper Guide"
           >
             <Compass size={13} className="text-terracotta" />
@@ -182,7 +182,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Cart Icon with Badge */}
           <button
             onClick={onCartOpen}
-            className={`relative p-2.5 transition-colors border rounded-none flex items-center justify-center ${isScrolled ? 'text-plum hover:text-teal border-subtle-grey bg-elevated' : 'text-parchment hover:text-teal border-parchment/30 bg-parchment/10 backdrop-blur-sm'}`}
+            className={`relative p-2.5 transition-colors rounded-none flex items-center justify-center drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)] ${isScrolled ? 'text-plum hover:text-teal border border-subtle-grey bg-elevated drop-shadow-none' : 'text-parchment hover:text-teal border-transparent bg-transparent'}`}
             aria-label="Shopping Cart"
           >
             <ShoppingBag size={18} />
