@@ -95,7 +95,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                 </h1>
 
                 <p className="text-sm md:text-base text-parchment/80 font-light max-w-lg leading-relaxed">
-                  Welcome to SaareeDrapes, a high-fashion publishing of modern ethnic luxury. We design using unbleached <span className="text-parchment font-semibold">Raw Parchment</span> silks, clashing against <span className="text-teal font-semibold">Electric Teal</span> and <span className="text-terracotta font-semibold">Burnt Terracotta</span>.
+                  Welcome to Drapes with Grace, a high-fashion publishing of modern ethnic luxury. We design using unbleached <span className="text-parchment font-semibold">Raw Parchment</span> silks, clashing against <span className="text-teal font-semibold">Electric Teal</span> and <span className="text-terracotta font-semibold">Burnt Terracotta</span>.
                 </p>
 
                 {/* Dynamic Stylist Tip Slider */}
@@ -234,7 +234,7 @@ export const HomePage: React.FC<HomePageProps> = ({
 
                   {/* Section Footer */}
                   <div className="flex justify-between items-center text-[9px] tracking-widest text-parchment/60 pt-4 border-t border-parchment/10">
-                    <span>SAAREEDRAPES EDITORIAL VOL. IV</span>
+                    <span>DRAPES WITH GRACE EDITORIAL VOL. IV</span>
                     <span>SCROLL TO NEXT SECTION &darr;</span>
                   </div>
 
@@ -309,7 +309,7 @@ export const HomePage: React.FC<HomePageProps> = ({
 
                   {/* Section Footer */}
                   <div className="flex justify-between items-center text-[9px] tracking-widest text-parchment/60 pt-4 border-t border-parchment/10">
-                    <span>SAAREEDRAPES METALLIC COOPERATIVES</span>
+                    <span>DRAPES WITH GRACE METALLIC COOPERATIVES</span>
                     <span>SCROLL TO NEXT SECTION &darr;</span>
                   </div>
 
@@ -460,7 +460,7 @@ export const HomePage: React.FC<HomePageProps> = ({
 
                   {/* Section Footer */}
                   <div className="flex justify-between items-center text-[9px] tracking-widest text-parchment/60 pt-4 border-t border-parchment/10">
-                    <span>SAAREEDRAPES ANCESTRAL DIRECTIVE &bull; 2026</span>
+                    <span>DRAPES WITH GRACE ANCESTRAL DIRECTIVE &bull; 2026</span>
                     <span>END OF COMPACT SPREAD &uarr;</span>
                   </div>
 

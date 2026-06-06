@@ -15,7 +15,7 @@ export const SAMPLE_PRODUCTS: SareeProduct[] = [
     colorName: 'Deep Aubergine',
     origin: 'Kanchipuram, Tamil Nadu',
     description: 'An avant-garde take on the classic heavy Kanjeevaram. Weaved with pure, high-twist mulberry silk threads, featuring deep aubergine warp intersected with glowing teal weft, yielding a stunning metallic sheen.',
-    editorialNote: '“Draped to highlight structured pleats, this piece clashes beautifully with modern, sharp-shouldered blazers in electric teal.” — SaareeDrapes Style Board',
+    editorialNote: '“Draped to highlight structured pleats, this piece clashes beautifully with modern, sharp-shouldered blazers in electric teal.” — Drapes with Grace Style Board',
     drapingDifficulty: 'Intermediate'
   },
   {

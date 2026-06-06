@@ -91,7 +91,7 @@ export const BestsellersCarousel: React.FC<BestsellersCarouselProps> = ({
           <div className="min-w-[280px] sm:min-w-[340px] md:min-w-[360px] flex-shrink-0 snap-start bg-plum p-8 flex flex-col justify-between border border-subtle-grey h-[490px]">
             <div className="space-y-6">
               <span className="text-[9px] uppercase tracking-[0.3em] text-teal font-bold block">
-                SAAREEDRAPES VOL. IV
+                DRAPES WITH GRACE VOL. IV
               </span>
               <h3 className="text-3xl font-bold text-parchment font-serif leading-tight">
                 The Full Neo-Heritage Manifesto

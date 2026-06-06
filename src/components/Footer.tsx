@@ -23,11 +23,11 @@ export const Footer: React.FC = () => {
           {/* Brand Manifesto Column (4 Cols) */}
           <div className="lg:col-span-4 space-y-6">
             <h2 className="text-3xl font-bold tracking-tighter font-serif">
-              Saaree<span className="italic text-teal font-medium">Drapes</span>
+              Drapes<span className="italic text-teal font-medium"> with Grace</span>
             </h2>
             
             <p className="text-sm text-mauve leading-relaxed font-sans">
-              A radical modernism study in raw silk. We designed SaareeDrapes to empower contemporary minds with structural, three-dimensional handwoven art. No clichés, only unapologetic premium heritage.
+              A radical modernism study in raw silk. We designed Drapes with Grace to empower contemporary minds with structural, three-dimensional handwoven art. No clichés, only unapologetic premium heritage.
             </p>
 
             <div className="space-y-3">
@@ -131,7 +131,7 @@ export const Footer: React.FC = () => {
       <div className="border-t border-subtle-grey bg-plum py-8 text-center text-parchment">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[11px] tracking-wider font-sans text-parchment/70">
-            &copy; 2026 SAAREEDRAPES Inc. All rights reserved. Curated for the contemporary luxury patron.
+            &copy; 2026 Drapes with Grace Inc. All rights reserved. Curated for the contemporary luxury patron.
           </p>
           
           <div className="flex gap-6 text-[11px] text-parchment/50 font-sans">

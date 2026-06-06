@@ -128,7 +128,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             className="group inline-block select-none text-left cursor-pointer"
           >
             <h1 className={`text-2xl md:text-3xl font-bold tracking-tighter font-serif group-hover:text-teal transition-colors leading-none ${isScrolled ? 'text-plum' : 'text-parchment drop-shadow-[0_1px_3px_rgba(0,0,0,0.7)]'}`}>
-              Saaree<span className="font-light italic text-teal">Drapes</span>
+              Drapes<span className="font-light italic text-teal"> with Grace</span>
             </h1>
             <span className={`text-[9px] uppercase tracking-[0.35em] block mt-0.5 text-center transition-colors drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)] ${isScrolled ? 'text-mauve drop-shadow-none' : 'text-parchment/70'}`}>
               Editorial Heritage

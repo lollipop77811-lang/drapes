@@ -268,7 +268,7 @@ export const DrapingMasterclass: React.FC = () => {
                 Still hesitant about the pleat count?
               </h4>
               <p className="text-xs text-parchment/80 leading-relaxed font-sans">
-                Every SaareeDrapes parcel ships with a private QR link to our video guide library. You can also schedule a complimentary 15-minute Zoom session with an in-house master stylist.
+                Every Drapes with Grace parcel ships with a private QR link to our video guide library. You can also schedule a complimentary 15-minute Zoom session with an in-house master stylist.
               </p>
               <div className="border-t border-parchment/15 pt-3 flex justify-between items-center text-[10px] font-bold font-sans tracking-wider text-teal">
                 <span>BOOK COMPLIMENTARY SESSION</span>

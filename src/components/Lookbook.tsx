@@ -199,7 +199,7 @@ export const Lookbook: React.FC<LookbookProps> = ({ products, onQuickView }) => 
         {/* High-Fashion Manifesto Banner */}
         <div className="mt-12 bg-plum text-parchment p-8 md:p-12 text-center space-y-6 border-2 border-teal">
           <span className="text-[10px] uppercase tracking-[0.3em] text-teal font-bold block">
-            SAAREEDRAPES EDITORIAL MANIFESTO
+            DRAPES WITH GRACE EDITORIAL MANIFESTO
           </span>
           <p className="text-xl md:text-3xl font-light font-serif italic max-w-3xl mx-auto leading-relaxed">
             “We strive to create garments that occupy 3D space with elegance, treating the six-yard handloom silk not as a historical relic, but as an interactive armor of contemporary color.”

@@ -50,7 +50,7 @@ export const QuickDrapingGuide: React.FC<QuickDrapingGuideProps> = ({ isOpen, on
                 DRAPING Q&A HELPER
               </h3>
               <p className="text-[10px] text-mauve uppercase font-sans">
-                SaareeDrapes High-Fashion Curators
+                Drapes with Grace High-Fashion Curators
               </p>
             </div>
           </div>

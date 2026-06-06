@@ -303,7 +303,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
 
           {/* Footer quote */}
           <div className="p-4 bg-plum text-parchment text-center text-[9px] uppercase tracking-[0.2em]">
-            SAAREEDRAPES • THE NEW ORDER OF ANCESTRAL MODERNISM
+            DRAPES WITH GRACE • THE NEW ORDER OF ANCESTRAL MODERNISM
           </div>
 
         </div>
