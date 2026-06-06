@@ -1,0 +1,62 @@
+Here is the complete, React-specific prompt for **Concept B: "Kolam / Mandala Net"**. 
+
+Since this concept relies on **generative, symmetrical geometry** rather than standard physics-based particles, the technical approach shifts. Standard particle libraries (like tsParticles) won't work well here. Instead, the prompt specifies **p5.js** (the industry standard for generative art) integrated into React, which will give you that stunning, mathematical, culturally-rooted aesthetic.
+
+***
+
+### 5.X Background Animation: “Generative Kolam Net” (React Implementation)
+
+**Goal:**  
+Create a culturally unique, interactive background animation for the SaareeDrapes hero section. Instead of a generic tech-particle network, this animation uses algorithmic generative art to mimic traditional Indian **Kolam or Mandala geometry**—dot grids connected by looping, symmetrical lines. It must feel like a living, breathing piece of heritage art, elevating the brand far above standard e-commerce templates.
+
+#### 5.X.1 Placement & Constraints
+- Use this animation **only** in the **hero section** of the Homepage.
+- Do **not** place it on Product Listing, Cart, Checkout, or Journal pages.
+- Provide a **static fallback background** (`#F4F1EA` Raw Parchment with a subtle, static SVG Kolam pattern) for low-end devices, mobile if performance drops, and users who respect `prefers-reduced-motion`.
+- The hero text, CTA, and saree imagery must remain **fully readable** above the animation.
+
+#### 5.X.2 Visual Style – Algorithmic Kolam / Mandala
+- **Metaphor:** A digital loom drawing a Kolam. It represents the foundation of Indian textile design—geometry, grids, and interlocking threads.
+- **Core Elements:**
+  - **Pulli (Dots):** A subtle, underlying grid of small dots (representing the foundational dots of a Kolam).
+  - **Looping Lines:** Smooth, curved Bézier lines that weave around the dots without touching them, creating symmetrical, interlocking loops.
+- **Colors (from SaareeDrapes palette):**
+  - Background: `#F4F1EA` (Raw Parchment).
+  - Dot Grid: `#E0DBD2` (Warm Grey) at very low opacity (~15%), barely visible.
+  - Generative Lines: Primarily `#C9963B` (Antique Gold) and `#C45B3E` (Burnt Terracotta) at ~20-30% opacity. Occasional loops in `#1A8888` (Electric Teal).
+- Overall feeling: **Intentional, sacred, mathematical, and deeply heritage**. It should look like an architectural blueprint of a saree weave.
+
+#### 5.X.3 Motion & Interactivity
+- **Generative Drawing (The "Weave"):** The lines should not just exist statically; they should slowly "draw themselves" from the center outward, mimicking the hand drawing a Kolam. Once complete, it holds for a moment, gently fades, and a new variation generates.
+- **Breathing/Pulsing:** The completed Kolam should have a very subtle "breathing" scale animation (e.g., scaling up 1-2% and back down slowly) to feel alive.
+- **Mouse Interactivity (Magnetic Attraction):** Unlike the "pushing" of silk threads, the Kolam should gently **attract** toward the cursor. As the mouse moves across the hero section, the nearest lines and dots should subtly curve/pull toward the cursor, like a magnetic force bending the weave. Release returns it smoothly to its symmetrical state.
+- **Touch / mobile:** Disable the magnetic attraction. Show a slow, looping generative draw animation.
+
+#### 5.X.4 React Implementation Guide (Mandatory Tech Stack)
+Because this is generative, algorithmic geometry (not standard physics particles), do **not** use tsParticles or Vanta.js. You must use **p5.js** for its superior mathematical and curve-drawing capabilities.
+
+1. **Dependencies:** Install `@p5-wrapper/react` (the standard, well-maintained React wrapper for p5.js).
+2. **Component Structure:** Create a dedicated `<GenerativeKolamBackground />` React component. 
+3. **p5.js Sketch Setup:**
+   - Use the `instance=true` mode in p5.js so it doesn't pollute the global window object.
+   - Canvas size must match the hero section dimensions dynamically (use `windowResized` function in p5).
+4. **Algorithmic Logic (The Kolam Generator):**
+   - **Grid System:** Calculate a grid of `pulli` (dots) based on the canvas size.
+   - **Symmetry:** Use p5's `push()`, `pop()`, `translate()`, and `rotate()` functions. Draw one quadrant of the Kolam, and mirror/rotate it 4 or 8 times to ensure perfect mathematical symmetry.
+   - **Curves:** Use p5's `curveVertex()` or `bezier()` to draw smooth lines that interlock around the dot grid.
+   - **Animation State:** Use the `draw()` loop to slowly progress the line generation based on `frameCount`.
+5. **Mouse Interaction Logic:**
+   - Map the React mouse coordinates to the p5 canvas.
+   - In the `draw()` loop, calculate the distance between the mouse and the nearest control points of the Bézier curves. Apply a subtle attraction vector to those points if they are within a ~200px radius.
+6. **Cleanup:** Ensure the p5 instance is properly removed on component unmount (`remove()` method) to prevent memory leaks.
+
+#### 5.X.5 Layering & Readability
+- Layer order (bottom to top):
+  1. Base parchment background (`#F4F1EA`)
+  2. p5.js Canvas with Generative Kolam
+  3. Semi-transparent overlay div (`rgba(244,241,234,0.65)`) - *Crucial for this concept so the complex geometry doesn't clash with the text.*
+  4. Hero content (heading, subheading, CTA buttons, saree imagery)
+
+#### 5.X.6 Accessibility & Performance
+- **Reduced Motion:** If `window.matchMedia('(prefers-reduced-motion: reduce)')` is true, do not run the p5 animation. Instead, render a static, high-quality SVG of a Kolam in the background.
+- **Mobile Performance:** Generative p5.js can be CPU-heavy. On viewports < 768px, significantly reduce the density of the dot grid (e.g., from a 10x10 grid to a 5x5 grid) and simplify the Bézier curve complexity to maintain 30+ FPS.

@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Syne", Georgia, serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+
+  --color-parchment: #F4F1EA;
+  --color-elevated: #FFFFFF;
+  --color-plum: #2D0A31;
+  --color-mauve: #6B5B73;
+  --color-teal: #1A8888;
+  --color-terracotta: #C45B3E;
+  --color-subtle-grey: #E0DBD2;
+}
+
+/* Custom CSS for smooth rendering and helper utilities */
+@layer base {
+  body {
+    background-color: #F4F1EA;
+    color: #2D0A31;
+    font-family: "DM Sans", sans-serif;
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6, .font-editorial {
+    font-family: "Syne", serif;
+  }
+}
+
+/* Helper classes for 3D Tilt hover effect */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Smooth scrollbars for high fashion look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4F1EA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C45B3E;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1A8888;
+}
