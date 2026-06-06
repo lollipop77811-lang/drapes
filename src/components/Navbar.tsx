@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ShoppingBag, Menu, X, Search, Compass } from 'lucide-react';
 import { CartItem } from '../types';
 
@@ -23,6 +23,15 @@ export const Navbar: React.FC<NavbarProps> = ({
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 80);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
 
@@ -33,7 +42,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   };
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-subtle-grey bg-parchment/95 backdrop-blur-md transition-all duration-250">
+    <header className={`sticky top-0 z-40 w-full transition-all duration-300 ${isScrolled ? 'bg-parchment/95 backdrop-blur-md border-b border-subtle-grey shadow-sm' : 'bg-transparent border-b border-transparent'}`}>
       {/* Editorial Announcement Marquee */}
       <div className="bg-plum text-parchment py-1.5 px-4 overflow-hidden text-center select-none">
         <div className="inline-flex items-center gap-8 text-[9px] md:text-[10px] font-bold uppercase tracking-widest animate-marquee whitespace-nowrap">
