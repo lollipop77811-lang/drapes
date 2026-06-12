@@ -51,10 +51,10 @@ export const HomePage: React.FC<HomePageProps> = ({
   const currentTip = styleTips[currentTipIndex];
 
   // 1. New Arrival Section Products
-  const newArrivalProducts = products.filter(p => p.tag === 'New Arrival' || p.id === 'sd-002' || p.id === 'sd-005');
+  const newArrivalProducts = products.filter(p => p.tag === 'New Arrival').slice(0, 3);
 
   // 2. Best Selling Saree Section Products
-  const bestSellingProducts = products.slice(0, 3);
+  const bestSellingProducts = products.filter(p => p.tag === 'Best Seller').slice(0, 3);
 
   // 3. Softy, Airy, Comfortable Section Products
   const softAiryComfortableProducts = products.filter(p => 
@@ -95,7 +95,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                 </h1>
 
                 <p className="text-sm md:text-base text-parchment/80 font-light max-w-lg leading-relaxed">
-                  Welcome to Drapes with Grace, a high-fashion publishing of modern ethnic luxury. We design using unbleached <span className="text-parchment font-semibold">Raw Parchment</span> silks, clashing against <span className="text-teal font-semibold">Electric Teal</span> and <span className="text-terracotta font-semibold">Burnt Terracotta</span>.
+                  Welcome to Drapes with Grace, a high-fashion publishing of modern ethnic luxury. Discover our exquisite collections with a price range of outfit: ₹1000 to ₹10000.
                 </p>
 
                 {/* Dynamic Stylist Tip Slider */}
@@ -204,7 +204,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                         New Arrival Capsule
                       </h3>
                       <p className="text-xs text-parchment/80 font-sans">
-                        Features our bold raw clays, neon teal threads, and mathematical geometric block prints.
+                        Features our new arrival category: cotton, silk, synthetic, and chanderi cotton.
                       </p>
                     </div>
                     
@@ -222,7 +222,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                   {/* Multiple products cards inside card */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-plum">
                     {newArrivalProducts.map((prod) => (
-                      <div key={`stack-new-${prod.id}`} className="h-[460px] bg-elevated border border-subtle-grey p-1">
+                      <div key={`stack-new-${prod.id}`} className="bg-elevated border border-subtle-grey p-1">
                         <ProductCard
                           product={prod}
                           onQuickView={onQuickView}
@@ -279,7 +279,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                         Bestselling Saree Masterpieces
                       </h3>
                       <p className="text-xs text-parchment/80 font-sans">
-                        These are the master weavings that occupy museum catalogs and lead worldwide fashion weeks.
+                        Featuring our best seller collection: cotton, linen, synthetic festive collection, and mul cotton.
                       </p>
                     </div>
                     
@@ -297,7 +297,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                   {/* Multiple products cards inside card */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-plum">
                     {bestSellingProducts.map((prod) => (
-                      <div key={`stack-best-${prod.id}`} className="h-[460px] bg-elevated border border-subtle-grey p-1">
+                      <div key={`stack-best-${prod.id}`} className="bg-elevated border border-subtle-grey p-1">
                         <ProductCard
                           product={prod}
                           onQuickView={onQuickView}
@@ -370,7 +370,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                   {/* Multiple products cards inside card */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-plum">
                     {softAiryComfortableProducts.map((prod) => (
-                      <div key={`stack-airy-${prod.id}`} className="h-[460px] bg-parchment border border-subtle-grey p-1">
+                      <div key={`stack-airy-${prod.id}`} className="bg-parchment border border-subtle-grey p-1">
                         <ProductCard
                           product={prod}
                           onQuickView={onQuickView}
@@ -427,7 +427,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                         Browse Saree by Weaving Fabric
                       </h3>
                       <p className="text-xs text-parchment/80 font-sans">
-                        Explore our three core fabric frameworks with custom region origin mappings.
+                        Explore our dress material: cotton, silk, georgette, chiffon, and synthetic.
                       </p>
                     </div>
                     
@@ -447,7 +447,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                     {[products[2], products[1], products[3]].map((prod) => {
                       if (!prod) return null;
                       return (
-                        <div key={`stack-fabric-${prod.id}`} className="h-[460px] bg-parchment border border-subtle-grey p-1">
+                        <div key={`stack-fabric-${prod.id}`} className="bg-parchment border border-subtle-grey p-1">
                           <ProductCard
                             product={prod}
                             onQuickView={onQuickView}

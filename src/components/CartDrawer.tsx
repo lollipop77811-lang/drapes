@@ -163,7 +163,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                           {/* Price & Quantity Selector */}
                           <div className="flex items-center justify-between pt-2">
                             <span className="text-xs font-bold text-plum font-sans">
-                              ${item.product.price} x {item.quantity}
+                              ₹{item.product.price} x {item.quantity}
                             </span>
                             
                             {/* Quantity triggers */}
@@ -227,7 +227,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                           Heritage Cedarbox
                           <Sparkles size={10} className="text-terracotta" />
                         </span>
-                        <span className="text-[9px] text-mauve font-sans block mt-1">Hand-engraved cedarwood, heirloom mothproof (+$45)</span>
+                        <span className="text-[9px] text-mauve font-sans block mt-1">Hand-engraved cedarwood, heirloom mothproof (+₹45)</span>
                       </button>
                     </div>
                   </div>
@@ -236,21 +236,21 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                   <div className="bg-elevated p-4 border border-subtle-grey space-y-2 text-xs font-sans text-plum">
                     <div className="flex justify-between">
                       <span className="text-mauve">Saree Subtotal</span>
-                      <span>${itemsPrice}</span>
+                      <span>₹{itemsPrice}</span>
                     </div>
                     {packagingOption === 'heritage' && (
                       <div className="flex justify-between text-terracotta">
                         <span>Heritage Cedar Box packaging</span>
-                        <span>+$45</span>
+                        <span>+₹45</span>
                       </div>
                     )}
                     <div className="flex justify-between">
                       <span className="text-mauve">Silk-Route Courier Shipping</span>
-                      <span>{shippingPrice === 0 ? <span className="text-teal font-bold">FREE OVER $500</span> : `$${shippingPrice}`}</span>
+                      <span>{shippingPrice === 0 ? <span className="text-teal font-bold">FREE OVER ₹500</span> : `₹${shippingPrice}`}</span>
                     </div>
                     <div className="border-t border-subtle-grey pt-2 flex justify-between text-sm font-bold">
                       <span>Total Luxury Investment</span>
-                      <span className="text-teal">${totalPrice}</span>
+                      <span className="text-teal">₹{totalPrice}</span>
                     </div>
                   </div>
 

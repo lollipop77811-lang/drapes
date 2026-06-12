@@ -51,7 +51,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             Editorial Drop: Vol. IV Neo-Heritage Is Live
           </span>
           <span className="hidden md:inline">•</span>
-          <span>Free Worldwide Silk-Route Express Courier Above $500</span>
+          <span>Free Worldwide Silk-Route Express Courier Above ₹500</span>
           <span className="hidden md:inline">•</span>
           <span className="text-teal">No Maroon, No Cliché: High-Fashion Saree Evolution</span>
           <span className="hidden md:inline">•</span>

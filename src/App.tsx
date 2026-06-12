@@ -10,6 +10,7 @@ import { DrapingMasterclass } from './components/DrapingMasterclass';
 import { Lookbook } from './components/Lookbook';
 import { QuickDrapingGuide } from './components/QuickDrapingGuide';
 import { CartDrawer } from './components/CartDrawer';
+import { FloatingContact } from './components/FloatingContact';
 import { Footer } from './components/Footer';
 import { ChevronRight } from 'lucide-react';
 
@@ -282,7 +283,7 @@ export default function App() {
                       “No weaves found matching this physical parameter.”
                     </p>
                     <p className="text-xs text-mauve max-w-md mx-auto font-sans">
-                      Our master weavers create in ultra-limited drops. Reset your filters to display our iconic Electric Teal, Burnt Terracotta, and Deep Aubergine mainstays.
+                      Our master weavers create in ultra-limited drops. Reset your filters to display our iconic cotton, silk, synthetic and chanderi cotton collections.
                     </p>
                     <button
                       onClick={resetFilters}
@@ -372,6 +373,9 @@ export default function App() {
         onRemoveItem={handleRemoveItem}
         onClearCart={handleClearCart}
       />
+
+      {/* Floating Contact Icons */}
+      <FloatingContact />
 
       {/* Luxury Footer */}
       <Footer />

@@ -164,9 +164,9 @@ export const ProductQuickView: React.FC<ProductQuickViewProps> = ({
 
               {/* Price Block */}
               <div className="flex items-center gap-3 pt-1">
-                <span className="text-2xl font-bold text-plum font-sans">${product.price}</span>
+                <span className="text-2xl font-bold text-plum font-sans">₹{product.price}</span>
                 {product.originalPrice && (
-                  <span className="text-sm line-through text-mauve">${product.originalPrice}</span>
+                  <span className="text-sm line-through text-mauve">₹{product.originalPrice}</span>
                 )}
                 <span className="text-xs font-bold text-terracotta uppercase tracking-widest ml-2">
                   Complimentary Blouse Fabric Included

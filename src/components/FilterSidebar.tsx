@@ -168,7 +168,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
           CURATOR NOTE
         </span>
         <p className="text-[11px] italic leading-relaxed text-parchment/90 font-serif">
-          “True editorial style lives in high contrast. Try pairing the Electric Teal Banarasi with an obsidian black silk corsetry.”
+          “True elegant style lives in high contrast. Try pairing our beautiful cotton and silk sarees with contrasting blouses.”
         </p>
       </div>
     </div>
